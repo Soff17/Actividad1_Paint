@@ -41,6 +41,15 @@ def rectangle(start, end):
 
 def triangle(start, end):
     "Draw triangle from start to end."
+    up()
+    goto(start.x,start.y) # marca el inicio
+    down()
+    begin_fill()
+    for i in range(2):
+        fd(end.x-start.x) # lado del triángulo
+        lt(120) # gira 120 grados
+    fd(end.x-start.x) # lado faltante
+    end_fill() # rellena con color
     pass  # TODO
 
 def tap(x, y):
