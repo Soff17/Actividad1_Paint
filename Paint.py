@@ -23,6 +23,16 @@ def square(start, end):
 
 def circle(start, end):
     "Draw circle from start to end."
+    import math
+    up()
+    goto(start.x,start.y) # Marca el inicio
+    down()
+    begin_fill()
+    for count in range(360):
+        # Fromación de un circulo unitario tomando como referencia la distancia entre dos puntos
+        fd(math.sin(math.radians(1))*(math.sqrt((end.x - start.x)**2+(end.y - start.y)**2)))
+        lt(1) # gira 1 grado
+    end_fill()
     pass  # TODO
 
 def rectangle(start, end):
